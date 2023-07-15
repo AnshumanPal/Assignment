@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import TodosContainer from "./containers/todos";
+import TodosContextProvider from "./contexts/TodosContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="">
+      <div className="pt-20">
+        <h1 className="text-5xl font-extralight text-center">Todo App</h1>
+      </div>
+      <TodosContextProvider>
+        <TodosContainer />
+      </TodosContextProvider>
+      <div className="text-center text-xs">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Created with ❤️ by{" "}
+          <a
+            className="text-blue-600"
+            href="https://anshuman-pal-portfolio.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Anshuman Pal
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
